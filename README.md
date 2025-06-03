@@ -48,6 +48,7 @@ genai-code-review-agent/
 git clone https://github.com/your-username/genai-code-review-agent.git
 cd genai-code-review-agent
 
+## Install Dependencies
 pip install -r requirements.txt
 
 ## Create a .env file with the following:
@@ -80,4 +81,14 @@ Reviewing /src/utils/helper.py...
 4. Best Practices:
    - Functions are small and focused.
    - Uses list comprehensions effectively.
+
+## 🧩 Extending the Agent
+✅ Add Git PR integration (comment reviews automatically)
+
+✅ Store reviews in Markdown or PDF
+
+✅ Add a simple Streamlit or Flask UI
+
+✅ Review only files changed in a given commit
+
 
