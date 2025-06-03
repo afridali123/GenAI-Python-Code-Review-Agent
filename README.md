@@ -29,4 +29,55 @@ A GenAI-powered assistant that reviews and analyzes Python code stored in Azure 
 ---
 
 ## 📁 Project Structure
+genai-code-review-agent/
+│
+├── main.py # Entry point: fetch code and get reviews
+├── azure_fetch.py # Functions to connect to Azure DevOps and fetch code
+├── code_reviewer.py # Code review logic using OpenAI GPT-4
+├── .env # Environment variables (not checked into GitHub)
+├── .gitignore # Ignore environment and secret files
+├── requirements.txt # Dependencies
+└── README.md # You're here!
+
+
+## ⚙️ Setup
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/genai-code-review-agent.git
+cd genai-code-review-agent
+
+pip install -r requirements.txt
+
+## Create a .env file with the following:
+OPENAI_API_KEY=your-openai-api-key
+AZURE_PAT=your-azure-devops-pat
+AZURE_ORG=your-org-name
+AZURE_PROJECT=your-project-name
+AZURE_REPO=your-repo-name
+
+## Run the Agent
+
+python main.py
+
+## Output Example 
+Reviewing /src/utils/helper.py...
+
+--- Review for /src/utils/helper.py ---
+
+1. Summary:
+   This file defines utility functions for handling file operations and data formatting.
+
+2. Issues:
+   - Uses a hardcoded path which should be parameterized.
+   - Lacks exception handling for file operations.
+
+3. Suggestions:
+   - Add docstrings for functions.
+   - Use pathlib for file paths.
+
+4. Best Practices:
+   - Functions are small and focused.
+   - Uses list comprehensions effectively.
 
