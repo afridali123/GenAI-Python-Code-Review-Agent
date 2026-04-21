@@ -2,6 +2,8 @@
 
 A GenAI-powered assistant that reviews and analyzes Python code stored in Azure DevOps Repos using OpenAI's ChatGPT API (GPT-4). It automates code quality checks, highlights bugs, suggests improvements, and provides summaries for Python files written by your team.
 
+GenAI-powered Python Code Review Agent that analyzes repositories, detects issues, and generates structured review reports using LLMs (GPT/Claude).
+
 ---
 
 ## 📌 Features
